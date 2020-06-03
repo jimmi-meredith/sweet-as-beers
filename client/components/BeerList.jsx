@@ -21,10 +21,12 @@ const BeerList = props => {
   )
 }
 
+// accessing the redux store to use the beers state
 const mapStateToProps = state => {
   return {
     beers: state.beers
   }
 }
 
+// connecting this component to the redux store
 export default connect(mapStateToProps)(BeerList)
