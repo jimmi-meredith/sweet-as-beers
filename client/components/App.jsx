@@ -1,11 +1,12 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import Header from './Header'
+import BeerList from './BeerList'
+import Cart from './Cart'
 
 // importing beers data for props
 import beersObject from '../../data/beers'
-import BeerList from './BeerList'
-import Cart from './Cart'
 
 // This might need to be turned into a stateful (class-based) component
 const App = () => (
@@ -23,4 +24,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default App
+export default connect(mapStateToProps)(App)
