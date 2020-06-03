@@ -13,8 +13,14 @@ const App = () => (
     <Header />
     {/* passing in the data as props (it is the full object, and beers is the array inside it) */}
     <BeerList beers={beersObject.beers}/>
-    {/* <Cart /> */}
+    <Cart />
   </div>
 )
+
+const mapStateToProps = state => {
+  return {
+    currentPage: state.currentPage
+  }
+}
 
 export default App
