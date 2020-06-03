@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import { addToCart } from '../actions'
+
 import BeerListItem from './BeerListItem'
 
 const BeerList = props => {
@@ -28,5 +30,13 @@ const mapStateToProps = state => {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+    addToCart: (id) => {
+      dispatch(addToCart(id))
+    }
+  }
+}
+
 // connecting this component to the redux store
-export default connect(mapStateToProps)(BeerList)
+export default connect(mapStateToProps, mapDispatchToProps)(BeerList)
