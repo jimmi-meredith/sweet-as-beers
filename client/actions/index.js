@@ -1,6 +1,8 @@
+export const NAVIGATE = 'NAVIGATE'
+
 export const navigate = target => {
   return {
-    type: 'NAVIGATE',
+    type: NAVIGATE,
     target // 'listing' or 'cart'
   }
 }
