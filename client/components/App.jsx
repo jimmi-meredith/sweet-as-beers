@@ -9,12 +9,13 @@ import Cart from './Cart'
 import beersObject from '../../data/beers'
 
 // This might need to be turned into a stateful (class-based) component
-const App = () => (
+const App = props => (
   <div className='app'>
     <Header />
     {/* passing in the data as props (it is the full object, and beers is the array inside it) */}
-    <BeerList beers={beersObject.beers}/>
-    <Cart />
+    {props.currentPage === 'beerList'
+      ? <BeerList beers={beersObject.beers}/>
+      : <Cart />}
   </div>
 )
 
