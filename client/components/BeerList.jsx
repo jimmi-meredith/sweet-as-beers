@@ -8,7 +8,7 @@ import BeerListItem from './BeerListItem'
 
 const BeerList = props => {
   // destructuring so props isn't needed to be typed each time
-  const beers = props.beers
+  const { beers, addToCart } = props
   return (
     <div className='beerlist'>
       <p className='welcome'>
@@ -17,7 +17,7 @@ const BeerList = props => {
       {beers.map(beer => {
         return (
           // listing each beer inside props as it's own item
-          <BeerListItem key={beer.id} beer={beer} />
+          <BeerListItem key={beer.id} beer={beer} addToCart={addToCart} />
         )
       })}
     </div>
