@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+// importing addToCart action for mapDispatchToProps
 import { addToCart } from '../actions'
 
 import BeerListItem from './BeerListItem'
@@ -30,8 +31,10 @@ const mapStateToProps = state => {
   }
 }
 
+// accessing the actions to pass the actions down as props
 const mapDispatchToProps = dispatch => {
   return {
+    // accessing the addToCart action to use
     addToCart: (id) => {
       dispatch(addToCart(id))
     }
