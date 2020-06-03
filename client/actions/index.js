@@ -13,6 +13,7 @@ export const navigate = target => {
 export const addToCart = (id, name) => {
   return {
     type: ADD_TO_CART,
+    // id and name of item added to cart
     id,
     name
   }
