@@ -5,15 +5,11 @@ import Header from './Header'
 import BeerList from './BeerList'
 import Cart from './Cart'
 
-// importing beers data for props
-import beersObject from '../../data/beers'
-
 const App = props => (
   <div className='app'>
     <Header />
-    {/* passing in the data as props (it is the full object, and beers is the array inside it) */}
     {props.currentPage === 'beerList'
-      ? <BeerList beers={beersObject.beers}/>
+      ? <BeerList />
       : <Cart />}
   </div>
 )
