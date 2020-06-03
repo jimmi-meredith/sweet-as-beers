@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import BeerListItem from './BeerListItem'
 
@@ -20,4 +21,10 @@ const BeerList = props => {
   )
 }
 
-export default BeerList
+const mapStateToProps = state => {
+  return {
+    beers: state.beers
+  }
+}
+
+export default connect(mapStateToProps)(BeerList)
