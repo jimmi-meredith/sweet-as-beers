@@ -8,7 +8,6 @@ import Cart from './Cart'
 // importing beers data for props
 import beersObject from '../../data/beers'
 
-// This might need to be turned into a stateful (class-based) component
 const App = props => (
   <div className='app'>
     <Header />
