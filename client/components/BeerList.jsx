@@ -14,6 +14,7 @@ const BeerList = props => {
       <p className='welcome'>
         Welcome! Please select from our delicious selection and don't hesitate to let us know if we can answer any of your questions.
       </p>
+      <p><a href='#'>Go to Cart</a></p>
       {beers.map(beer => {
         return (
           // listing each beer inside props as it's own item
