@@ -35,7 +35,7 @@ class Cart extends React.Component {
   }
 }
 
-const mapSateToProps = state => {
+const mapStateToProps = state => {
   return {
     cart: state.cart
   }
@@ -49,5 +49,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-// first parameter is null as this component is not using mapSateToProps
-export default connect(null, mapDispatchToProps)(Cart)
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)
