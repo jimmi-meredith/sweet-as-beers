@@ -5,6 +5,7 @@ import { navigate } from '../actions'
 
 class Cart extends React.Component {
   render () {
+    // using this.props as this is a class component
     const { navigate } = this.props
     return (
       <div className='cart'>
@@ -39,4 +40,5 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
+// first parameter is null as this component is not using mapSateToProps
 export default connect(null, mapDispatchToProps)(Cart)
