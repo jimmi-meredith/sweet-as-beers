@@ -47,7 +47,5 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-// PLAY WITH ADDING DISPATCH NAVIGATION HERE VS. IN APP FOR GO TO CART
-
 // connecting this component to the redux store
 export default connect(mapStateToProps, mapDispatchToProps)(BeerList)
