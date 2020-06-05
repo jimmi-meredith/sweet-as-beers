@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-// importing addToCart action for mapDispatchToProps
+// importing addToCart and navigate actions for mapDispatchToProps
 import { addToCart, navigate } from '../actions'
 
 import BeerListItem from './BeerListItem'
@@ -14,6 +14,7 @@ const BeerList = props => {
       <p className='welcome'>
         Welcome! Please select from our delicious selection and don't hesitate to let us know if we can answer any of your questions.
       </p>
+      {/* add navigate action here as an onclick */}
       <p><a href='#' onClick={() => navigate('cart')}>Go to Cart</a></p>
       {beers.map(beer => {
         return (
@@ -39,6 +40,7 @@ const mapDispatchToProps = dispatch => {
     addToCart: (id) => {
       dispatch(addToCart(id))
     },
+    // access navigate action for routing to cart page
     navigate: () => {
       dispatch(navigate('cart'))
     }
