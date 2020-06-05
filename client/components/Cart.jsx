@@ -35,6 +35,12 @@ class Cart extends React.Component {
   }
 }
 
+const mapSateToProps = state => {
+  return {
+    cart: state.cart
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
     navigate: () => {
