@@ -9,6 +9,9 @@ class Cart extends React.Component {
     const { navigate } = this.props
     return (
       <div className='cart'>
+
+        <p className="welcome">Thirsty? Sweet! You're one step closer to a quenching.</p>
+
         <table>
           <thead>
             <tr>
