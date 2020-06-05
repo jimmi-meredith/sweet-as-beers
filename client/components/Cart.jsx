@@ -1,12 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import CartItem from './CartItem'
 import { navigate } from '../actions'
 
 class Cart extends React.Component {
   render () {
     // using this.props as this is a class component
-    const { navigate } = this.props
+    const { navigate, cart } = this.props
     return (
       <div className='cart'>
 
@@ -21,7 +22,11 @@ class Cart extends React.Component {
             </tr>
           </thead>
           <tbody>
-
+            {cart.map((item, id) => {
+              return (
+                <CartItem key={id} item={item} />
+              )
+            })}
           </tbody>
         </table>
 
