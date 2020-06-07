@@ -1,5 +1,7 @@
 import React from 'react'
 
+import beersData from '../../data/beers'
+
 const CartItem = props => {
   return (
     <tr>
@@ -11,6 +13,11 @@ const CartItem = props => {
       <td><button><span className='fa fa-trash fa-2x'></span></button></td>
     </tr>
   )
+}
+
+function getBeerNameFromId (id) {
+  const beer = beersData.beers.find(beer => beer.id === id)
+  return beer.name
 }
 
 export default CartItem
