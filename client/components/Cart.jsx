@@ -22,7 +22,6 @@ class Cart extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {/* IS UNDERFINED, NEED TO SORT THIS */}
             {cart.map((item, id) => {
               return (
                 <CartItem key={id} item={item} />
