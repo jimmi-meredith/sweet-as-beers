@@ -1,10 +1,12 @@
-export const ADD_TO_CART = 'ADD_TO_CART'
+import { ADD_TO_CART, REMOVE_FROM_CART } from '../actions'
 
 const cart = (state = [], action) => {
   switch (action.type) {
     case ADD_TO_CART:
       // returns an array with the current state, plus a new object including the details of item added
       return getNewCart(state, action.id)
+    case REMOVE_FROM_CART:
+      return state.filter(item => item.id !== action.id)
     default:
       return state
   }
