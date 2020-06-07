@@ -6,6 +6,7 @@ const cart = (state = [], action) => {
       // returns an array with the current state, plus a new object including the details of item added
       return getNewCart(state, action.id)
     case REMOVE_FROM_CART:
+      // keep all items where the action id doesn't match the item's id
       return state.filter(item => item.id !== action.id)
     default:
       return state
