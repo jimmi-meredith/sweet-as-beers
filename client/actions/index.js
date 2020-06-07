@@ -1,6 +1,7 @@
 // Setting type to not equal a string
 export const NAVIGATE = 'NAVIGATE'
 export const ADD_TO_CART = 'ADD_TO_CART'
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 
 export const navigate = target => {
   return {
@@ -16,5 +17,12 @@ export const addToCart = (id, name) => {
     // id and name of item added to cart
     id,
     name
+  }
+}
+
+export const removeFromCart = (id) => {
+  return {
+    type: REMOVE_FROM_CART,
+    id
   }
 }
