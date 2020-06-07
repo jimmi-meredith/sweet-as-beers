@@ -3,10 +3,11 @@ import React from 'react'
 import beersData from '../../data/beers'
 
 const CartItem = props => {
+  const beerName = getBeerNameFromId(props.item.id)
   return (
     <tr>
       {/* get name from props */}
-      <td>{props.item.name}</td>
+      <td>{beerName}</td>
       {/* get quantity from props */}
       <td><input className='update-input' value={props.item.quantity} /></td>
       {/* create delete action */}
