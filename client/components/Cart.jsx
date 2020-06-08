@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import CartItem from './CartItem'
-import { navigate } from '../actions'
+import { navigate, removeFromCart } from '../actions'
 
 class Cart extends React.Component {
   constructor (props) {
@@ -10,6 +10,12 @@ class Cart extends React.Component {
     this.state = {
       cart: props.cart
     }
+  }
+
+  removeItem = (id) => {
+    const cart = this.state.cart.filter(item => item.id !== id)
+    this.setState({ cart })
+    this.props.removeFromCart(id)
   }
 
   render () {
@@ -31,7 +37,7 @@ class Cart extends React.Component {
           <tbody>
             {cart.map((item, id) => {
               return (
-                <CartItem key={id} item={item} />
+                <CartItem key={id} item={item} removeFromCart={this.removeItem}/>
               )
             })}
           </tbody>
