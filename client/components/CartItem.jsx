@@ -10,7 +10,7 @@ const CartItem = props => {
       <td>{beerName}</td>
       <td><input className='update-input' value={props.item.quantity} /></td>
       {/* create delete action */}
-      <td><button>
+      <td><button onClick={() => props.removeFromCart(props.item.id)}>
         <span className='fa fa-trash fa-2x'></span>
       </button></td>
     </tr>
