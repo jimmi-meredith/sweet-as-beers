@@ -5,6 +5,13 @@ import CartItem from './CartItem'
 import { navigate } from '../actions'
 
 class Cart extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      cart: props.cart
+    }
+  }
+
   render () {
     // using this.props as this is a class component
     const { navigate, cart } = this.props
@@ -48,9 +55,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    navigate: () => {
-      dispatch(navigate('beerList'))
-    }
+    navigate: () => dispatch(navigate('beerList')),
+    removeFromCart: (id) => dispatch(removeFromCart(id))
   }
 }
 
