@@ -28,6 +28,7 @@ export const removeFromCart = id => {
   }
 }
 
+// passing the whole cart as the update will update all quantities across the cart
 export const updateQuantities = cart => {
   return {
     type: UPDATE_QUANTITIES,
