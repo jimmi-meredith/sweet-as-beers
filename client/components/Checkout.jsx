@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 export const Checkout = () => {
   return (
@@ -11,4 +12,10 @@ export const Checkout = () => {
   )
 }
 
-export default Checkout
+const mapDispatchToProps = dispatch => {
+  return {
+    navigate: () => dispatch(navigate('listing'))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Checkout)
