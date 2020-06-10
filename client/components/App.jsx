@@ -4,13 +4,20 @@ import { connect } from 'react-redux'
 import Header from './Header'
 import BeerList from './BeerList'
 import Cart from './Cart'
+import Checkout from './Checkout'
 
 const App = props => (
   <div className='app'>
     <Header />
-    {props.currentPage === 'beerList'
+
+    {/* {props.currentPage === 'beerList'
       ? <BeerList />
-      : <Cart />}
+      : <Cart />} */}
+
+    {props.currentPage === 'beerList' && <BeerList />}
+    {props.currentPage === 'cart' && <Cart />}
+    {props.currentPage === 'checkout' && <Checkout />}
+
   </div>
 )
 
