@@ -11,9 +11,11 @@ const BeerList = props => {
   const { beers, addToCart, navigate } = props
   return (
     <div className='beerlist'>
+
       <p className='welcome'>
         Welcome! Please select from our delicious selection and don't hesitate to let us know if we can answer any of your questions.
       </p>
+
       {/* add navigate action here as an onclick */}
       <button className='button-primary' onClick={() => navigate('cart')}>Go to Cart</button>
 

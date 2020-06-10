@@ -8,11 +8,8 @@ import Checkout from './Checkout'
 
 const App = props => (
   <div className='app'>
-    <Header />
 
-    {/* {props.currentPage === 'beerList'
-      ? <BeerList />
-      : <Cart />} */}
+    <Header />
 
     {props.currentPage === 'beerList' && <BeerList />}
     {props.currentPage === 'cart' && <Cart />}
