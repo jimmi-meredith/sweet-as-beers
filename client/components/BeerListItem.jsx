@@ -11,7 +11,7 @@ const BeerListItem = props => {
         <span className='country'>{beer.country}</span>
         <span className='abv'>{beer.abv} abv</span>
         {/* add onclick event for dispatching the addToCart action */}
-        <a href='#' className='cart-link' onClick={() => addToCart(beer.id)}>Add to cart</a>
+        <a href='#/' className='cart-link' onClick={() => addToCart(beer.id)}>Add to cart</a>
       </p>
     </div>
   )
