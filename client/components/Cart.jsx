@@ -20,6 +20,17 @@ class Cart extends React.Component {
     this.props.removeFromCart(id)
   }
 
+  updateCart = (id, quantity) => {
+    this.setState({
+      cart: this.state.cart.map(item => {
+        if (item.id === id) {
+          item.quantity = quantity
+        }
+        return item
+      })
+    })
+  }
+
   render () {
     // using this.props as this is a class component
     const { navigate, cart } = this.props
