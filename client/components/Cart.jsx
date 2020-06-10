@@ -12,7 +12,8 @@ class Cart extends React.Component {
     }
   }
 
-  removeItem = (id) => {
+  // making a function called removeItem that uses the removeFromCart function given as props from mapDispatchToProps
+  removeItem = id => {
     const cart = this.state.cart.filter(item => item.id !== id)
     this.setState({ cart })
     this.props.removeFromCart(id)
