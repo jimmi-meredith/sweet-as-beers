@@ -15,11 +15,13 @@ const BeerList = props => {
         Welcome! Please select from our delicious selection and don't hesitate to let us know if we can answer any of your questions.
       </p>
       {/* add navigate action here as an onclick */}
-      <p><a href='#' onClick={() => navigate('cart')}>Go to Cart</a></p>
+      <button className='button-primary' onClick={() => navigate('cart')}>Go to Cart</button>
+
       {beers.map(beer => {
         return (
           // listing each beer inside props as it's own item
           <BeerListItem key={beer.id} beer={beer} addToCart={addToCart} />
+
         )
       })}
     </div>
