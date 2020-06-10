@@ -3,14 +3,15 @@ import React from 'react'
 import beersData from '../../data/beers'
 
 const CartItem = props => {
-  const beerName = getBeerNameFromId(props.item.id)
+  const { id, quantity } = props.item
+  const beerName = getBeerNameFromId(id)
   return (
     <tr>
       {/* Use beer name instead of props */}
       <td>{beerName}</td>
-      <td><input className='update-input' value={props.item.quantity} onChange={event => props.updateCart(props.item.id, event.target.value)} /></td>
+      <td><input className='update-input' value={quantity} onChange={event => props.updateCart(id, event.target.value)} /></td>
       {/* create delete action */}
-      <td><button onClick={() => props.removeFromCart(props.item.id)}>
+      <td><button onClick={() => props.removeFromCart(id)}>
         <span className='fa fa-trash fa-2x'></span>
       </button></td>
     </tr>
