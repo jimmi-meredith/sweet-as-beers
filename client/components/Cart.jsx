@@ -16,6 +16,7 @@ class Cart extends React.Component {
   removeItem = id => {
     const cart = this.state.cart.filter(item => item.id !== id)
     this.setState({ cart })
+    // this is where the id is given to removeFromCart dispatch
     this.props.removeFromCart(id)
   }
 
@@ -63,7 +64,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     navigate: () => dispatch(navigate('beerList')),
-    removeFromCart: (id) => dispatch(removeFromCart(id))
+    removeFromCart: id => dispatch(removeFromCart(id))
   }
 }
 

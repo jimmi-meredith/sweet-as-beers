@@ -1,17 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from '../actions'
-
-const cart = (state = [], action) => {
-  switch (action.type) {
-    case ADD_TO_CART:
-      // returns an array with the current state, plus a new object including the details of item added
-      return getNewCart(state, action.id)
-    case REMOVE_FROM_CART:
-      // keep all items where the action id doesn't match the item's id
-      return state.filter(item => item.id !== action.id)
-    default:
-      return state
-  }
-}
+import { ADD_TO_CART, REMOVE_FROM_CART, UPDATE_QUANTITIES } from '../actions'
 
 function getNewCart (cart, id) {
   // set default item to false as if it doesn't exist in the cart already
@@ -36,6 +23,22 @@ function getNewCart (cart, id) {
     newCart.push({ id: id, quantity: 1 })
     // then return the newCart
     return newCart
+  }
+}
+
+const cart = (state = [], action) => {
+  switch (action.type) {
+    case ADD_TO_CART:
+      // returns an array with the current state, plus a new object including the details of item added
+      return getNewCart(state, action.id)
+    case REMOVE_FROM_CART:
+      // keep all items where the action id doesn't match the item's id
+      return state.filter(item => item.id !== action.id)
+    case UPDATE_QUANTITIES:
+      // returns the updated results of the cart
+      return action.cart
+    default:
+      return state
   }
 }
 
