@@ -22,6 +22,7 @@ class Cart extends React.Component {
 
   updateCart = (id, quantity) => {
     this.setState({
+      // for each item in the cart, map the item's id with the one selected, then update the quantity value
       cart: this.state.cart.map(item => {
         if (item.id === id) {
           item.quantity = Number(quantity)
