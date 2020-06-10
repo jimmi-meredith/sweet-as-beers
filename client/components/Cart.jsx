@@ -34,7 +34,7 @@ class Cart extends React.Component {
 
   render () {
     // using this.props as this is a class component
-    const { navigate, cart } = this.props
+    const { navigate, cart, updateQuantities } = this.props
     return (
       <div className='cart'>
 
@@ -59,7 +59,7 @@ class Cart extends React.Component {
 
         <p className='actions'>
           <a href='#' onClick={() => navigate('beerList')}>Continue shopping</a>
-          <button>Update</button>
+          <button onClick={() => updateQuantities(this.state.cart)}>Update</button>
           <button className='button-primary'>Checkout</button>
         </p>
       </div>
