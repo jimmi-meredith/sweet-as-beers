@@ -8,7 +8,7 @@ const CartItem = props => {
     <tr>
       {/* Use beer name instead of props */}
       <td>{beerName}</td>
-      <td><input className='update-input' value={props.item.quantity} /></td>
+      <td><input className='update-input' value={props.item.quantity} onChange={event => props.updateCart(props.item.id, event.target.value)} /></td>
       {/* create delete action */}
       <td><button onClick={() => props.removeFromCart(props.item.id)}>
         <span className='fa fa-trash fa-2x'></span>
