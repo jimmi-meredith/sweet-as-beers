@@ -10,7 +10,6 @@ const CartItem = props => {
       {/* Use beer name instead of props */}
       <td>{beerName}</td>
       <td><input className='update-input' value={quantity} onChange={event => props.updateCart(id, event.target.value)} /></td>
-      {/* create delete action */}
       <td><button onClick={() => props.removeFromCart(id)}>
         <span className='fa fa-trash fa-2x'></span>
       </button></td>
