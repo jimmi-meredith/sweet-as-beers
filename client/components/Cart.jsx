@@ -51,7 +51,7 @@ class Cart extends React.Component {
           <tbody>
             {cart.map((item, id) => {
               return (
-                <CartItem key={id} item={item} removeFromCart={this.removeItem}/>
+                <CartItem key={id} item={item} updateCart={this.updateCart} removeFromCart={this.removeItem}/>
               )
             })}
           </tbody>
