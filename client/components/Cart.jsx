@@ -24,7 +24,7 @@ class Cart extends React.Component {
     this.setState({
       cart: this.state.cart.map(item => {
         if (item.id === id) {
-          item.quantity = quantity
+          item.quantity = Number(quantity)
         }
         return item
       })
