@@ -1,20 +1,20 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-export const Checkout = () => {
+export const Checkout = props => {
   return (
     <div className='checkout'>
       <p className='welcome'>
         Thank you for your purchase! We hope you enjoy your order.
       </p>
-      <button className='button-primary'>Return Home</button>
+      <button className='button-primary' onClick={() => props.navigate('beerList')}>Return Home</button>
     </div>
   )
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    navigate: () => dispatch(navigate('listing'))
+    navigate: () => dispatch(navigate('beerList'))
   }
 }
 
