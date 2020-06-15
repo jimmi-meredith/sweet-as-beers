@@ -1,4 +1,4 @@
-export const NAVIGATE = 'NAVIGATE'
+import { NAVIGATE } from '../actions'
 
 // setting the default state to be the 'beerList' page
 const currentPage = (state = 'beerList', action) => {
