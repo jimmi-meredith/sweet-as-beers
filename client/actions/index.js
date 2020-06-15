@@ -3,6 +3,7 @@ export const NAVIGATE = 'NAVIGATE'
 export const ADD_TO_CART = 'ADD_TO_CART'
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 export const UPDATE_QUANTITIES = 'UPDATE_QUANTITIES'
+export const ADD_ORDER = 'ADD_ORDER'
 
 export const navigate = target => {
   return {
@@ -32,6 +33,13 @@ export const removeFromCart = id => {
 export const updateQuantities = cart => {
   return {
     type: UPDATE_QUANTITIES,
+    cart
+  }
+}
+
+export const addOrder = cart => {
+  return {
+    type: ADD_ORDER,
     cart
   }
 }
