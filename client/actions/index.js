@@ -37,6 +37,7 @@ export const updateQuantities = cart => {
   }
 }
 
+// adds the current cart info when checked out into a new order
 export const addOrder = cart => {
   return {
     type: ADD_ORDER,
