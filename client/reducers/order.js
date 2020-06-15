@@ -1,9 +1,7 @@
 import { ADD_ORDER } from '../actions'
 
 const initialState = {
-  pending: [],
-  fulfilled: [],
-  cancelled: []
+  pending: []
 }
 
 const order = (state = initialState, action) => {
