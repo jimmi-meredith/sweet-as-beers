@@ -79,6 +79,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
+  // importing actions to be used in this component
   return {
     // change navigate to take a pageState instead of a hard coded string because there are multiple sifferent navigate links in this component
     navigate: pageState => dispatch(navigate(pageState)),
