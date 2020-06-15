@@ -32,6 +32,10 @@ class Cart extends React.Component {
     })
   }
 
+  handleClick = () => {
+    this.props.navigate('checkout')
+  }
+
   render () {
     // using this.props as this is a class component
     const { navigate, cart, updateQuantities } = this.props
@@ -75,7 +79,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    navigate: (pageState) => dispatch(navigate(pageState)),
+    navigate: pageState => dispatch(navigate(pageState)),
     removeFromCart: id => dispatch(removeFromCart(id)),
     updateQuantities: cart => dispatch(updateQuantities(cart))
   }
