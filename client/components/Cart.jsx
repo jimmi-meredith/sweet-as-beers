@@ -75,7 +75,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    navigate: () => dispatch(navigate('beerList')),
+    navigate: (pageState) => dispatch(navigate(pageState)),
     removeFromCart: id => dispatch(removeFromCart(id)),
     updateQuantities: cart => dispatch(updateQuantities(cart))
   }
