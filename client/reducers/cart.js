@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART, UPDATE_QUANTITIES } from '../actions'
+import { ADD_TO_CART, REMOVE_FROM_CART, UPDATE_QUANTITIES, CLEAR_CART } from '../actions'
 
 function getNewCart (cart, id) {
   // set default item to false as if it doesn't exist in the cart already
@@ -37,6 +37,8 @@ const cart = (state = [], action) => {
     case UPDATE_QUANTITIES:
       // returns the updated results of the cart
       return action.cart
+    case CLEAR_CART:
+      return []
     default:
       return state
   }
