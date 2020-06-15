@@ -35,6 +35,7 @@ class Cart extends React.Component {
   // create a separate handleClick function for checkout button
   handleClick = () => {
     this.props.navigate('checkout')
+    this.props.addOrder(this.state.cart)
   }
 
   render () {
