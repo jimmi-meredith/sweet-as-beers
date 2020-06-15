@@ -38,6 +38,7 @@ const cart = (state = [], action) => {
       // returns the updated results of the cart
       return action.cart
     case CLEAR_CART:
+      // returns an empty array to reset the cart
       return []
     default:
       return state
