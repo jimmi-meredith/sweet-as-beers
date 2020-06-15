@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import { navigate } from '../actions'
+
 export const Checkout = props => {
   return (
     <div className='checkout'>
