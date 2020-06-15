@@ -32,6 +32,7 @@ class Cart extends React.Component {
     })
   }
 
+  // create a separate handleClick function for checkout button
   handleClick = () => {
     this.props.navigate('checkout')
   }
@@ -79,6 +80,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    // change navigate to take a pageState instead of a hard coded string because there are multiple sifferent navigate links in this component
     navigate: pageState => dispatch(navigate(pageState)),
     removeFromCart: id => dispatch(removeFromCart(id)),
     updateQuantities: cart => dispatch(updateQuantities(cart))
