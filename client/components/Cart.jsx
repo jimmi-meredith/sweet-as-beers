@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import CartItem from './CartItem'
-import { navigate, removeFromCart, updateQuantities } from '../actions'
+import { navigate, removeFromCart, updateQuantities, addOrder } from '../actions'
 
 class Cart extends React.Component {
   constructor (props) {
@@ -83,7 +83,8 @@ const mapDispatchToProps = dispatch => {
     // change navigate to take a pageState instead of a hard coded string because there are multiple sifferent navigate links in this component
     navigate: pageState => dispatch(navigate(pageState)),
     removeFromCart: id => dispatch(removeFromCart(id)),
-    updateQuantities: cart => dispatch(updateQuantities(cart))
+    updateQuantities: cart => dispatch(updateQuantities(cart)),
+    addOrder: cart => dispatch(addOrder(cart))
   }
 }
 
