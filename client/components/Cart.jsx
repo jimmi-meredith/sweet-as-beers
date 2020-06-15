@@ -33,7 +33,7 @@ class Cart extends React.Component {
   }
 
   // create a separate handleClick function for checkout button
-  handleClick = () => {
+  handleCheckout = () => {
     this.props.navigate('checkout')
     this.props.addOrder(this.state.cart)
   }
@@ -66,7 +66,7 @@ class Cart extends React.Component {
         <p className='actions'>
           <a href='#' onClick={() => navigate('beerList')}>Continue shopping</a>
           <button onClick={() => updateQuantities(this.state.cart)}>Update</button>
-          <button className='button-primary' onClick={this.handleClick}>Checkout</button>
+          <button className='button-primary' onClick={this.handleCheckout}>Checkout</button>
         </p>
       </div>
     )
