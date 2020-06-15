@@ -60,7 +60,7 @@ class Cart extends React.Component {
         <p className='actions'>
           <a href='#' onClick={() => navigate('beerList')}>Continue shopping</a>
           <button onClick={() => updateQuantities(this.state.cart)}>Update</button>
-          <button className='button-primary'>Checkout</button>
+          <button className='button-primary' onClick={() => navigate('checkout')}>Checkout</button>
         </p>
       </div>
     )
