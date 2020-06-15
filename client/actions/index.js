@@ -46,6 +46,7 @@ export const addOrder = cart => {
   }
 }
 
+// clears the cart once an order has been placed to reset for next order
 export const clearCart = () => {
   return {
     type: CLEAR_CART
