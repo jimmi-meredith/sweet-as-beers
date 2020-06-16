@@ -5,6 +5,7 @@ import Header from './Header'
 import BeerList from './BeerList'
 import Cart from './Cart'
 import Checkout from './Checkout'
+import Admin from './Admin'
 
 const App = props => (
   <div className='app'>
@@ -14,6 +15,7 @@ const App = props => (
     {props.currentPage === 'beerList' && <BeerList />}
     {props.currentPage === 'cart' && <Cart />}
     {props.currentPage === 'checkout' && <Checkout />}
+    {props.currentPage === 'admin' && <Admin />}
 
   </div>
 )
