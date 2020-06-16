@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 
 import { navigate } from '../actions'
 
-const Admin = () => {
+const Admin = props => {
   return (
     <div className='admin'>
 
       <p className='welcome'>Manage orders here</p>
 
-      <button className='button-primary' onClick={() => navigate('BeerList')}>Return Home</button>
+      <button className='button-primary' onClick={() => props.navigate('BeerList')}>Return Home</button>
 
       <h3>Orders Pending</h3>
 
