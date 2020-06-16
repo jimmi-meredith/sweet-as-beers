@@ -47,8 +47,8 @@ const mapDispatchToProps = dispatch => {
       dispatch(addToCart(id))
     },
     // access navigate action for routing to cart page
-    navigate: () => {
-      dispatch(navigate('cart'))
+    navigate: pageState => {
+      dispatch(navigate(pageState))
     }
   }
 }
