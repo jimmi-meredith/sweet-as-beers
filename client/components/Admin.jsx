@@ -1,4 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+import { navigate } from '../actions'
 
 const Admin = () => {
   return (
@@ -14,4 +17,10 @@ const Admin = () => {
   )
 }
 
-export default Admin
+const mapDispatchToProps = dispatch => {
+  return {
+    navigate: () => dispatch(navigate('beerList'))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Admin)
