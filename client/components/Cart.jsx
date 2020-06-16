@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import CartItem from './CartItem'
-import { navigate, removeFromCart, updateQuantities, addOrder } from '../actions'
+import { navigate, removeFromCart, updateQuantities, addOrder, clearCart } from '../actions'
 
 class Cart extends React.Component {
   constructor (props) {
@@ -86,7 +86,8 @@ const mapDispatchToProps = dispatch => {
     navigate: pageState => dispatch(navigate(pageState)),
     removeFromCart: id => dispatch(removeFromCart(id)),
     updateQuantities: cart => dispatch(updateQuantities(cart)),
-    addOrder: cart => dispatch(addOrder(cart))
+    addOrder: cart => dispatch(addOrder(cart)),
+    clearCart: () => dispatch(clearCart())
   }
 }
 
