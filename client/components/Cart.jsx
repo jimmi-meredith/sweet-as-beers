@@ -36,6 +36,7 @@ class Cart extends React.Component {
   handleCheckout = () => {
     this.props.navigate('checkout')
     this.props.addOrder(this.state.cart)
+    this.props.clearCart()
   }
 
   render () {
