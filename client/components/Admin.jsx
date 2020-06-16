@@ -7,7 +7,7 @@ const Admin = () => {
   return (
     <div className='admin'>
 
-      <p calssName='welcome'>Manage orders here</p>
+      <p className='welcome'>Manage orders here</p>
 
       <button className='button-primary' onClick={() => navigate('BeerList')}>Return Home</button>
 
