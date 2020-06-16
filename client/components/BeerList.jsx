@@ -17,7 +17,7 @@ const BeerList = props => {
       </p>
 
       <p className='actions'>
-        <button>Admin Portal</button>
+        <button onClick={() => navigate('admin')}>Admin Portal</button>
         <button className='button-primary' onClick={() => navigate('cart')}>Go to Cart</button>
       </p>
 
