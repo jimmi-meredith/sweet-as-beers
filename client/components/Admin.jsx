@@ -6,6 +6,8 @@ const Admin = () => {
 
       <p calssName='welcome'>Manage orders here</p>
 
+      <button className='button-primary'>Return Home</button>
+
       <h3>Orders Pending</h3>
 
     </div>
