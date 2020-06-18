@@ -5,7 +5,7 @@ import CartItem from './CartItem'
 import { navigate, removeFromCart, updateQuantities, addOrder, clearCart } from '../actions'
 
 class Cart extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       cart: props.cart
@@ -39,7 +39,7 @@ class Cart extends React.Component {
     this.props.clearCart()
   }
 
-  render () {
+  render() {
     // using this.props as this is a class component
     const { navigate, cart, updateQuantities } = this.props
     return (
@@ -58,7 +58,7 @@ class Cart extends React.Component {
           <tbody>
             {cart.map((item, id) => {
               return (
-                <CartItem key={id} item={item} updateCart={this.updateCart} removeFromCart={this.removeItem}/>
+                <CartItem key={id} item={item} updateCart={this.updateCart} removeFromCart={this.removeItem} />
               )
             })}
           </tbody>
@@ -67,7 +67,7 @@ class Cart extends React.Component {
         <p className='actions'>
           <a href='#' onClick={() => navigate('beerList')}>Continue shopping</a>
           <button onClick={() => updateQuantities(this.state.cart)}>Update</button>
-          <button className='button-primary' onClick={this.handleCheckout}>Checkout</button>
+          <button className='button-primary' onClick={this.handleCheckout} disabled={this.state.cart.length === 0}>Checkout</button>
         </p>
       </div>
     )
