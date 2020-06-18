@@ -6,6 +6,7 @@ export const UPDATE_QUANTITIES = 'UPDATE_QUANTITIES'
 export const ADD_ORDER = 'ADD_ORDER'
 export const CLEAR_CART = 'CLEAR_CART'
 export const CANCEL_ORDER = 'CANCEL_ORDER'
+export const FULFIL_ORDER = 'FULFIL_ORDER'
 
 export const navigate = target => {
   return {
@@ -58,6 +59,13 @@ export const clearCart = () => {
 export const cancelOrder = id => {
   return {
     type: CANCEL_ORDER,
+    id
+  }
+}
+
+export const fulfilOrder = id => {
+  return {
+    type: FULFIL_ORDER,
     id
   }
 }
