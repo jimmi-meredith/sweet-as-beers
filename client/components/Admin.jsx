@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { navigate } from '../actions'
+import OrderItem from './OrderItem'
 
 const Admin = props => {
   return (
@@ -12,6 +13,12 @@ const Admin = props => {
       <button className='button-primary' onClick={() => props.navigate('BeerList')}>Return Home</button>
 
       <h3>Orders Pending</h3>
+
+      {props.pending.map(order => {
+        return (
+          <OrderItem key={order.id} order={order} />
+        )
+      })}
 
     </div>
   )
