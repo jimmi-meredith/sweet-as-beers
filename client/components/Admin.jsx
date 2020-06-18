@@ -17,10 +17,16 @@ const Admin = props => {
   )
 }
 
+const mapStateToProps = state => {
+  return {
+    pending: state.order.pending
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
     navigate: () => dispatch(navigate('beerList'))
   }
 }
 
-export default connect(null, mapDispatchToProps)(Admin)
+export default connect(mapStateToProps, mapDispatchToProps)(Admin)
