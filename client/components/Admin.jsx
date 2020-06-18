@@ -14,9 +14,9 @@ const Admin = props => {
 
       <h3>Orders Pending</h3>
 
-      {props.pending.map(order => {
+      {props.pending.map(pendingOrder => {
         return (
-          <OrderItem key={order.id} order={order} />
+          <OrderItem key={pendingOrder.id} pendingOrder={pendingOrder} />
         )
       })}
 
