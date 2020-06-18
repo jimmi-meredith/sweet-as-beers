@@ -15,15 +15,15 @@ const Admin = props => {
       <div className='admin-orders'>
 
         <div className='admin-column'>
+
           <h3>Orders Pending</h3>
+          {props.pending.map(pendingOrder => {
+            return (
+              <OrderItem key={pendingOrder.id} pendingOrder={pendingOrder} />
+            )
+          })}
+
         </div>
-
-        {props.pending.map(pendingOrder => {
-          return (
-            <OrderItem key={pendingOrder.id} pendingOrder={pendingOrder} />
-          )
-        })}
-
         <div className='admin-column'>
           <h3>Orders Cancelled</h3>
         </div>
