@@ -22,6 +22,8 @@ const Admin = props => {
 
       <h3>Orders Cancelled</h3>
 
+      <h3>Orders Fulfilled</h3>
+
     </div>
   )
 }
