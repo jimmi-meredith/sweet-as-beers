@@ -12,7 +12,9 @@ const Admin = props => {
 
       <button className='button-primary' onClick={() => props.navigate('BeerList')}>Return Home</button>
 
-      <h3>Orders Pending</h3>
+      <div className='admin-column'>
+        <h3>Orders Pending</h3>
+      </div>
 
       {props.pending.map(pendingOrder => {
         return (
@@ -20,9 +22,13 @@ const Admin = props => {
         )
       })}
 
-      <h3>Orders Cancelled</h3>
+      <div className='admin-column'>
+        <h3>Orders Cancelled</h3>
+      </div>
 
-      <h3>Orders Fulfilled</h3>
+      <div className='admin-column'>
+        <h3>Orders Fulfilled</h3>
+      </div>
 
     </div>
   )
