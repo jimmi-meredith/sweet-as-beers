@@ -54,6 +54,7 @@ export const clearCart = () => {
   }
 }
 
+// moves the order into 'cancelled' by it's id
 export const cancelOrder = id => {
   return {
     type: CANCEL_ORDER,
