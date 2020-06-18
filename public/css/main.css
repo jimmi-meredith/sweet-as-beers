@@ -70,3 +70,7 @@ h1 {
   margin-bottom: 1rem;
   max-width: 20%;
 }
+
+.admin-orders {
+  display: flex;
+}

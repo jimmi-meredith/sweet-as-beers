@@ -12,22 +12,26 @@ const Admin = props => {
 
       <button className='button-primary' onClick={() => props.navigate('BeerList')}>Return Home</button>
 
-      <div className='admin-column'>
-        <h3>Orders Pending</h3>
-      </div>
+      <div className='admin-orders'>
 
-      {props.pending.map(pendingOrder => {
-        return (
-          <OrderItem key={pendingOrder.id} pendingOrder={pendingOrder} />
-        )
-      })}
+        <div className='admin-column'>
+          <h3>Orders Pending</h3>
+        </div>
 
-      <div className='admin-column'>
-        <h3>Orders Cancelled</h3>
-      </div>
+        {props.pending.map(pendingOrder => {
+          return (
+            <OrderItem key={pendingOrder.id} pendingOrder={pendingOrder} />
+          )
+        })}
 
-      <div className='admin-column'>
-        <h3>Orders Fulfilled</h3>
+        <div className='admin-column'>
+          <h3>Orders Cancelled</h3>
+        </div>
+
+        <div className='admin-column'>
+          <h3>Orders Fulfilled</h3>
+        </div>
+
       </div>
 
     </div>
