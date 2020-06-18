@@ -1,4 +1,4 @@
-import { ADD_ORDER } from '../actions'
+import { ADD_ORDER, CANCEL_ORDER, FULFIL_ORDER } from '../actions'
 
 // defining initial state as an array for pending orders to be added to once an order has been placed
 const initialState = {
@@ -19,6 +19,10 @@ const order = (state = initialState, action) => {
           }
         ]
       }
+    case CANCEL_ORDER:
+      return state
+    case FULFIL_ORDER:
+      return state
     default:
       return state
   }
