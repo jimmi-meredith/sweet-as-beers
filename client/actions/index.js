@@ -5,6 +5,7 @@ export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 export const UPDATE_QUANTITIES = 'UPDATE_QUANTITIES'
 export const ADD_ORDER = 'ADD_ORDER'
 export const CLEAR_CART = 'CLEAR_CART'
+export const CANCEL_ORDER = 'CANCEL_ORDER'
 
 export const navigate = target => {
   return {
@@ -50,5 +51,12 @@ export const addOrder = cart => {
 export const clearCart = () => {
   return {
     type: CLEAR_CART
+  }
+}
+
+export const cancelOrder = id => {
+  return {
+    type: CANCEL_ORDER,
+    id
   }
 }
