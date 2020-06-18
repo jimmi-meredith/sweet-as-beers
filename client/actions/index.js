@@ -63,6 +63,7 @@ export const cancelOrder = id => {
   }
 }
 
+// moves the order into 'fulfilled' by it's id
 export const fulfilOrder = id => {
   return {
     type: FULFIL_ORDER,
