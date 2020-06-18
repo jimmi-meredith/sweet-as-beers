@@ -2,7 +2,9 @@ import { ADD_ORDER, CANCEL_ORDER, FULFIL_ORDER } from '../actions'
 
 // defining initial state as an array for pending orders to be added to once an order has been placed
 const initialState = {
-  pending: []
+  pending: [],
+  cancelled: [],
+  fulfilled: []
 }
 
 const order = (state = initialState, action) => {
