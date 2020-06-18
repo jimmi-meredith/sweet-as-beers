@@ -5,7 +5,7 @@ import CartItem from './CartItem'
 import { navigate, removeFromCart, updateQuantities, addOrder, clearCart } from '../actions'
 
 class Cart extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       cart: props.cart
@@ -39,7 +39,7 @@ class Cart extends React.Component {
     this.props.clearCart()
   }
 
-  render() {
+  render () {
     // using this.props as this is a class component
     const { navigate, cart, updateQuantities } = this.props
     return (
