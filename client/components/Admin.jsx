@@ -35,6 +35,11 @@ const Admin = props => {
 
         <div className='admin-column'>
           <h3>Orders Fulfilled</h3>
+          {props.fulfilled.map(order => {
+            return (
+              <OrderItem key={order.id} order={order} />
+            )
+          })}
         </div>
 
       </div>
