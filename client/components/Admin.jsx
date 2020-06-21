@@ -5,49 +5,53 @@ import { navigate } from '../actions'
 import OrderItem from './OrderItem'
 
 class Admin extends React.Component {
-  render () {
-    return (
-      <div className='admin'>
+state = {
+  selectedOrder: ''
+}
 
-        <p className='welcome'>Manage orders here</p>
+render () {
+  return (
+    <div className='admin'>
 
-        <button className='button-primary' onClick={() => this.props.navigate('BeerList')}>Return Home</button>
+      <p className='welcome'>Manage orders here</p>
 
-        <div className='admin-orders'>
+      <button className='button-primary' onClick={() => this.props.navigate('BeerList')}>Return Home</button>
 
-          <div className='admin-column'>
+      <div className='admin-orders'>
 
-            <h3>Orders Pending</h3>
-            {this.props.pending.map(order => {
-              return (
-                <OrderItem key={order.id} order={order} />
-              )
-            })}
+        <div className='admin-column'>
 
-          </div>
-          <div className='admin-column'>
-            <h3>Orders Cancelled</h3>
-            {this.props.cancelled.map(order => {
-              return (
-                <OrderItem key={order.id} order={order} />
-              )
-            })}
-          </div>
+          <h3>Orders Pending</h3>
+          {this.props.pending.map(order => {
+            return (
+              <OrderItem key={order.id} order={order} />
+            )
+          })}
 
-          <div className='admin-column'>
-            <h3>Orders Fulfilled</h3>
-            {this.props.fulfilled.map(order => {
-              return (
-                <OrderItem key={order.id} order={order} />
-              )
-            })}
-          </div>
+        </div>
+        <div className='admin-column'>
+          <h3>Orders Cancelled</h3>
+          {this.props.cancelled.map(order => {
+            return (
+              <OrderItem key={order.id} order={order} />
+            )
+          })}
+        </div>
 
+        <div className='admin-column'>
+          <h3>Orders Fulfilled</h3>
+          {this.props.fulfilled.map(order => {
+            return (
+              <OrderItem key={order.id} order={order} />
+            )
+          })}
         </div>
 
       </div>
-    )
-  }
+
+    </div>
+  )
+}
 }
 
 const mapStateToProps = state => {
