@@ -26,6 +26,11 @@ const Admin = props => {
         </div>
         <div className='admin-column'>
           <h3>Orders Cancelled</h3>
+          {props.cancelled.map(cancelledOrder => {
+            return (
+              <OrderItem key={cancelledOrder.id} cancelledOrder={cancelledOrder} />
+            )
+          })}
         </div>
 
         <div className='admin-column'>
