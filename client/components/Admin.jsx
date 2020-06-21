@@ -19,6 +19,7 @@ render () {
 
       <h3>Selected Order:  {this.state.selectedOrder}</h3>
       <button>Cancel Order</button>
+      <button>Fulfil Order</button>
 
       <div className='admin-orders'>
 
