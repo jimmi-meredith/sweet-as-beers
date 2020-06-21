@@ -22,17 +22,25 @@ const order = (state = initialState, action) => {
         ]
       }
     case CANCEL_ORDER:
-      let selectedOrder = state.pending.find(order => order.id === action.id)
-      let newPending = state.pending.filter(order => order.id !== action.id)
+      let selectedOrderC = state.pending.find(order => order.id === action.id)
+      let newPendingC = state.pending.filter(order => order.id !== action.id)
 
-      if (newPending[0].length === 0) newPending = []
+      if (newPendingC[0].length === 0) newPendingC = []
       return {
         ...state,
-        pending: newPending,
-        cancelled: [...state.cancelled, selectedOrder]
+        pending: newPendingC,
+        cancelled: [...state.cancelled, selectedOrderC]
       }
     case FULFIL_ORDER:
-      return state
+      let selectedOrderF = state.pending.find(order => order.id === action.id)
+      let newPendingF = state.pending.filter(order => order.id !== action.id)
+
+      if (newPendingF[0].length === 0) newPendingF = []
+      return {
+        ...state,
+        pending: newPendingF,
+        cancelled: [...state.cancelled, selectedOrderF]
+      }
     default:
       return state
   }
