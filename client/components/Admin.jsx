@@ -17,18 +17,18 @@ const Admin = props => {
         <div className='admin-column'>
 
           <h3>Orders Pending</h3>
-          {props.pending.map(pendingOrder => {
+          {props.pending.map(order => {
             return (
-              <OrderItem key={pendingOrder.id} pendingOrder={pendingOrder} />
+              <OrderItem key={order.id} order={order} />
             )
           })}
 
         </div>
         <div className='admin-column'>
           <h3>Orders Cancelled</h3>
-          {props.cancelled.map(cancelledOrder => {
+          {props.cancelled.map(order => {
             return (
-              <OrderItem key={cancelledOrder.id} cancelledOrder={cancelledOrder} />
+              <OrderItem key={order.id} order={order} />
             )
           })}
         </div>
