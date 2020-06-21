@@ -17,6 +17,8 @@ render () {
 
       <button className='button-primary' onClick={() => this.props.navigate('BeerList')}>Return Home</button>
 
+      <h3>Selected Order {this.state.selectedOrder}</h3>
+
       <div className='admin-orders'>
 
         <div className='admin-column'>
