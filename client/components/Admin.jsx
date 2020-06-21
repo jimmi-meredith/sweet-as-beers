@@ -40,7 +40,8 @@ const Admin = props => {
 
 const mapStateToProps = state => {
   return {
-    pending: state.order.pending
+    pending: state.order.pending,
+    cancelled: state.order.cancelled
   }
 }
 
