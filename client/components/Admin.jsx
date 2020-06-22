@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { navigate } from '../actions'
+import { navigate, cancelOrder } from '../actions'
 import OrderItem from './OrderItem'
 
 class Admin extends React.Component {
