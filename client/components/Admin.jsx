@@ -42,7 +42,7 @@ render () {
           <h3>Orders Pending</h3>
           {this.props.pending.map(order => {
             return (
-              <OrderItem key={order.id} order={order} />
+              <OrderItem key={order.id} onClick={() => this.handleClick(order.id)} order={order} />
             )
           })}
 
@@ -51,7 +51,7 @@ render () {
           <h3>Orders Cancelled</h3>
           {this.props.cancelled.map(order => {
             return (
-              <OrderItem key={order.id} order={order} />
+              <OrderItem key={order.id} onClick={() => this.handleClick(order.id)} order={order} />
             )
           })}
         </div>
@@ -60,7 +60,7 @@ render () {
           <h3>Orders Fulfilled</h3>
           {this.props.fulfilled.map(order => {
             return (
-              <OrderItem key={order.id} order={order} />
+              <OrderItem key={order.id} onClick={() => this.handleClick(order.id)} order={order} />
             )
           })}
         </div>
