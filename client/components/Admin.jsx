@@ -32,8 +32,8 @@ render () {
       <button className='button-primary' onClick={() => this.props.navigate('BeerList')}>Return Home</button>
 
       <h3>Selected Order:  {this.state.selectedOrder}</h3>
-      <button>Cancel Order</button>
-      <button>Fulfil Order</button>
+      <button onClick={this.handleCancel}>Cancel Order</button>
+      <button onClick={this.handleFulfil}>Fulfil Order</button>
 
       <div className='admin-orders'>
 
