@@ -69,7 +69,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     navigate: () => dispatch(navigate('beerList')),
-    cancelOrder: id => dispatch(cancelOrder(id))
+    cancelOrder: id => dispatch(cancelOrder(id)),
+    fulfilOrder: id => dispatch(fulfilOrder(id))
   }
 }
 
