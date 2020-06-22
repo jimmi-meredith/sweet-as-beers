@@ -9,6 +9,12 @@ state = {
   selectedOrder: ''
 }
 
+handleClick = id => {
+  this.setState({
+    selectedOrder: id
+  })
+}
+
 handleCancel = () => {
   this.props.cancelOrder(this.state.selectedOrder)
 }
