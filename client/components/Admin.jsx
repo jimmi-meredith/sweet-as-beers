@@ -9,6 +9,10 @@ state = {
   selectedOrder: ''
 }
 
+handleCancel = () => {
+  this.props.cancelOrder(this.state.selectedOrder)
+}
+
 render () {
   return (
     <div className='admin'>
