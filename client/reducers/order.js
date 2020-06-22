@@ -39,7 +39,7 @@ const order = (state = initialState, action) => {
       return {
         ...state,
         pending: newPendingF,
-        cancelled: [...state.cancelled, selectedOrderF]
+        fulfilled: [...state.cancelled, selectedOrderF]
       }
     default:
       return state
