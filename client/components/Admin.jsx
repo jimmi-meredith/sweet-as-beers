@@ -13,6 +13,10 @@ handleCancel = () => {
   this.props.cancelOrder(this.state.selectedOrder)
 }
 
+handleFulfil = () => {
+  this.props.fulfilOrder(this.state.selectedOrder)
+}
+
 render () {
   return (
     <div className='admin'>
