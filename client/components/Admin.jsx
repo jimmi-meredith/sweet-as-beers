@@ -54,11 +54,14 @@ render () {
         </div>
         <div className='admin-column'>
           <h3>Orders Cancelled</h3>
-          {cancelled.map(order => {
-            return (
-              <OrderItem key={order.id} handleClick={this.handleClick(order.id)} order={order} />
-            )
-          })}
+          { typeof cancelled !== 'undefined' && cancelled.length > 0
+            ? cancelled.map(order => {
+              return (
+                <OrderItem key={order.id} handleClick={this.handleClick(order.id)} order={order} />
+              )
+            })
+            : ''
+          }
         </div>
 
         <div className='admin-column'>
