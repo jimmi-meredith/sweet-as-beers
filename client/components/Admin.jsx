@@ -25,6 +25,7 @@ handleFulfil = () => {
 
 render () {
   const { pending, cancelled, fulfilled } = this.props
+
   return (
     <div className='admin'>
 
@@ -41,11 +42,14 @@ render () {
         <div className='admin-column'>
 
           <h3>Orders Pending</h3>
-          {pending.map(order => {
-            return (
-              <OrderItem key={order.id} handleClick={this.handleClick(order.id)} order={order} />
-            )
-          })}
+          { typeof pending !== 'undefined' && pending.length > 0
+            ? pending.map(order => {
+              return (
+                <OrderItem key={order.id} handleClick={this.handleClick(order.id)} order={order} />
+              )
+            })
+            : ''
+          }
 
         </div>
         <div className='admin-column'>
