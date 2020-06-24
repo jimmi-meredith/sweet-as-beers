@@ -24,6 +24,7 @@ handleFulfil = () => {
 }
 
 render () {
+  const { pending, cancelled, fulfilled } = this.props
   return (
     <div className='admin'>
 
